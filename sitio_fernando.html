@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fernando Castillo — IT Specialist</title>
+  <meta name="description" content="Soporte técnico on-demand 24/7. RapiTech — Fernando Castillo" />
+  <style>
+    :root{--bg:#071029;--surface:#0b1220;--card:#071827;--muted:#93a6b8;--accent:#06b6d4;--accent-2:#7c3aed}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;color:#e6eef6;background:linear-gradient(180deg,#071029 0%, #071827 100%);-webkit-font-smoothing:antialiased}
+
+    /* header */
+    header{width:100%;position:fixed;top:0;left:0;z-index:60;background:rgba(3,8,16,0.35);backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,0.03)}
+    .nav{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center}
+    .logo img{width:100%;height:100%;object-fit:contain;display:block}
+    .brand-title{font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+
+    /* language switch */
+    .lang{display:flex;gap:8px;align-items:center}
+    .lang button{background:transparent;border:1px solid transparent;color:var(--muted);padding:6px 10px;border-radius:8px;font-weight:700;cursor:pointer}
+    .lang button.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#041025;border-color:transparent}
+
+    /* hero full width */
+    .hero{padding:110px 28px 40px;display:block}
+    .hero-inner{max-width:1400px;margin:0 auto;display:flex;gap:28px;align-items:center}
+    .hero-left{flex:1}
+    h1{margin:0;font-size:40px;color:#f4fbff}
+    p.lead{color:var(--muted);margin-top:8px}
+    .cta{display:inline-block;margin-top:18px;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#041025;font-weight:700;text-decoration:none}
+    .hero-right{width:420px;max-width:38%;border-radius:12px;overflow:hidden}
+    .hero-right img{width:100%;height:auto;display:block}
+
+    /* main content */
+    .main{max-width:1400px;margin:18px auto;padding:0 20px 40px}
+    .card{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;margin-bottom:16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    h2{color:#cfeefe;margin-top:0}
+    .muted{color:var(--muted)}
+
+    /* contact form */
+    form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit}
+    textarea{grid-column:1 / -1}
+    .submit{grid-column:1 / -1;display:flex;justify-content:flex-end}
+
+    footer{max-width:1400px;margin:0 auto;padding:18px 20px;color:var(--muted);text-align:center}
+
+    @media(max-width:980px){.hero-inner{flex-direction:column}.hero-right{width:100%}.nav{padding:12px}} 
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo"><img src="logo.jpg" alt="logo" onerror="this.style.display='none'"></div>
+        <div>
+          <div class="brand-title" data-key="brand-title">Fernando Castillo</div>
+          <div class="muted" data-key="brand-sub">Servicios técnicos 24/7 — Marca personal</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:18px">
+        <nav aria-label="Main">
+          <a href="#inicio" data-key="nav-home">Inicio</a>
+          <a href="#servicios" data-key="nav-services">Servicios</a>
+          <a href="#proyectos" data-key="nav-projects">Proyectos</a>
+          <a href="#testimonios" data-key="nav-testimonials">Testimonios</a>
+          <a href="#contacto" data-key="nav-contact">Contacto</a>
+        </nav>
+
+        <div class="lang" style="margin-left:14px">
+          <button id="fr" class="active">FR</button>
+          <button id="en">EN</button>
+          <button id="es">ES</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h1 data-key="hero-title">Soporte técnico on‑demand — réponse rapide 24/7</h1>
+        <p class="lead" data-key="hero-lead">Soluciones rápidas y confiables en TI. Atención personal, experiencia en gobierno y proyectos que impulsan tu marca personal.</p>
+        <a class="cta" href="#contacto" data-key="hero-cta">Solicitar servicio</a>
+      </div>
+      <div class="hero-right">
+        <img src="hero.jpg" alt="visual" onerror="this.style.display='none'" />
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+    <section id="servicios" class="card">
+      <h2 data-key="services-title">Servicios</h2>
+      <div class="grid">
+        <div>
+          <h3 data-key="svc-1">Servicio 24/7</h3>
+          <p class="muted" data-key="svc-1-desc">Atención remota e in‑site según necesidad. Respuesta rápida ante emergencias.</p>
+        </div>
+        <div>
+          <h3 data-key="svc-2">Gestión de sistemas</h3>
+          <p class="muted" data-key="svc-2-desc">Soporte en infraestructuras, parches, backups y seguridad.</p>
+        </div>
+        <div>
+          <h3 data-key="svc-3">Asesoría y formación</h3>
+          <p class="muted" data-key="svc-3-desc">Capacitaciones para equipos y documentación fácil de seguir.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="card">
+      <h2 data-key="projects-title">Proyectos</h2>
+      <div class="grid">
+        <div class="muted">Migration cloud — cliente A: Concepción y ejecución de migración segura al cloud.</div>
+        <div class="muted">Automatización backups — cliente B: Políticas de respaldo y pruebas de restauración.</div>
+        <div class="muted">Soporte 24/7 — empresa C: SLA con respuesta rápida en horas críticas.</div>
+      </div>
+    </section>
+
+    <section id="testimonios" class="card">
+      <h2 data-key="testimonials-title">Testimonios</h2>
+      <div class="grid">
+        <div>
+          <blockquote>« Excelente respuesta y profesionalismo. »</blockquote>
+          <div class="muted">— Cliente, Montreal</div>
+        </div>
+        <div>
+          <blockquote>« Trabajo impecable y comunicación clara. »</blockquote>
+          <div class="muted">— Cliente, Toronto</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="card">
+      <h2 data-key="contact-title">Contacto</h2>
+      <p class="muted" data-key="contact-text">Usa el formulario para solicitar una cotización o intervención urgente.</p>
+      <form onsubmit="window.location.href='mailto:tu@correo.com?subject=Solicitud%20de%20servicio';return false;">
+        <input type="text" name="name" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo" required />
+        <textarea name="message" rows="5" placeholder="Mensaje"></textarea>
+        <div class="submit"><button class="cta" type="submit" data-key="contact-cta">Enviar</button></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="muted">© <span id="year"></span> Fernando Castillo — Todos los derechos reservados</div>
+  </footer>
+
+  <script>
+    // translations (fr default) — natural phrasing
+    const t = {
+      fr: {
+        'brand-title':'Fernando Castillo','brand-sub':'Services techniques 24/7','nav-home':'Accueil','nav-services':'Services','nav-projects':'Projets','nav-testimonials':'Témoignages','nav-contact':'Contact','hero-title':'Support technique on‑demand — réponse rapide 24/7','hero-lead':'Solutions rapides et fiables en informatique. Accompagnement personnel, expérience et professionnalisme.','hero-cta':'Demander un service','services-title':'Services','svc-1':'Service 24/7','svc-1-desc':'Assistance à distance et sur site. Réponse rapide en cas d\'urgence.','svc-2':'Gestion des systèmes','svc-2-desc':'Support d\'infrastructures, correctifs, sauvegardes et sécurité.','svc-3':'Conseil & formation','svc-3-desc':'Formations et documentation claire pour vos équipes.','projects-title':'Projets','testimonials-title':'Témoignages','contact-title':'Contact','contact-text':'Envoyez un message pour une estimation ou intervention urgente.','contact-cta':'Envoyer'
+      },
+      en: {
+        'brand-title':'Fernando Castillo','brand-sub':'24/7 technical services','nav-home':'Home','nav-services':'Services','nav-projects':'Projects','nav-testimonials':'Testimonials','nav-contact':'Contact','hero-title':'On‑demand technical support — fast response 24/7','hero-lead':'Fast, reliable IT solutions. Personal attention, experience and professionalism.','hero-cta':'Request service','services-title':'Services','svc-1':'24/7 Service','svc-1-desc':'Remote and on‑site assistance. Fast response for critical incidents.','svc-2':'Systems management','svc-2-desc':'Infrastructure support, patches, backups and security.','svc-3':'Advising & training','svc-3-desc':'Training and clear documentation for your teams.','projects-title':'Projects','testimonials-title':'Testimonials','contact-title':'Contact','contact-text':'Send a message for a quote or urgent intervention.','contact-cta':'Send'
+      },
+      es: {
+        'brand-title':'Fernando Castillo','brand-sub':'Servicios técnicos 24/7','nav-home':'Inicio','nav-services':'Servicios','nav-projects':'Proyectos','nav-testimonials':'Testimonios','nav-contact':'Contacto','hero-title':'Soporte técnico on‑demand — respuesta rápida 24/7','hero-lead':'Soluciones rápidas y confiables en TI. Atención personal y profesionalismo.','hero-cta':'Solicitar servicio','services-title':'Servicios','svc-1':'Servicio 24/7','svc-1-desc':'Atención remota y en sitio. Respuesta rápida ante incidentes críticos.','svc-2':'Gestión de sistemas','svc-2-desc':'Soporte en infraestructuras, parches, respaldos y seguridad.','svc-3':'Asesoría y formación','svc-3-desc':'Capacitación y documentación clara para equipos.','projects-title':'Proyectos','testimonials-title':'Testimonios','contact-title':'Contacto','contact-text':'Envía un mensaje para una cotización o intervención urgente.','contact-cta':'Enviar'
+      }
+    };
+
+    function setLang(lang){
+      document.querySelectorAll('[data-key]').forEach(el=>{
+        const k = el.getAttribute('data-key');
+        if(t[lang] && t[lang][k]) el.textContent = t[lang][k];
+      });
+      // placeholders + static small text
+      const placeholders = {
+        fr:{name:'Votre nom', email:'Votre e‑mail', message:'Votre message'},
+        en:{name:'Your name', email:'Your email', message:'Your message'},
+        es:{name:'Tu nombre', email:'Tu correo', message:'Mensaje'}
+      };
+      document.querySelectorAll('input[name="name"]').forEach(i=>i.placeholder = placeholders[lang].name);
+      document.querySelectorAll('input[name="email"]').forEach(i=>i.placeholder = placeholders[lang].email);
+      document.querySelectorAll('textarea').forEach(tar=>tar.placeholder = placeholders[lang].message);
+
+      // active button
+      document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+      document.documentElement.lang = (lang==='fr'?'fr':(lang==='en'?'en':'es'));
+    }
+
+    document.getElementById('fr').addEventListener('click', ()=>setLang('fr'));
+    document.getElementById('en').addEventListener('click', ()=>setLang('en'));
+    document.getElementById('es').addEventListener('click', ()=>setLang('es'));
+
+    // smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+
+    // set default language FR
+    setLang('fr');
+
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
